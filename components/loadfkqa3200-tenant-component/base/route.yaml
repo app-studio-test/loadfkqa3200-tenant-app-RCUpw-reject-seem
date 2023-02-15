@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadfkqa3200-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadfkqa3200-tenant-component
+    app.kubernetes.io/part-of: loadfkqa3200-tenant-app
+  name: loadfkqa3200-tenant-component
+  namespace: loadfkqa3200-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadfkqa3200-tenant-component
+    weight: null
+status: {}
